@@ -1,0 +1,22 @@
+<html>
+<body>
+<div style="color:green;font-size:57px;">
+<script language="JavaScript">
+ 
+var d1_Ceg=prompt("Pierwszy dzień: ","");
+var d2_Ceg=prompt("Dzien koncowy:","");
+
+ var a=parseInt(d1_Ceg);
+ var b=parseInt(d2_Ceg);
+ 
+ if(0<a && 0<b && 32>b && 32>a && b>a){
+    var days = b-a;
+    days=days*24*60*60;
+    document.write("Pomiędzy "+a+" ,a "+b+" minęło: "+days+" sekund");
+}else{
+document.write("Zostały podane złe dane");
+}
+ </script>
+</div>
+</body>
+</html>

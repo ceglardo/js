@@ -1,0 +1,33 @@
+<html>
+<body>
+<div style="color:green;font-size:57px;">
+<script language="JavaScript">
+var D1_Ceg=prompt("D1_Ceg=","");
+var D2_Ceg=prompt("D2_Ceg=","");
+var G1_Ceg=prompt("G1_Ceg=","");
+var G2_Ceg=prompt("G2_Ceg=","");
+
+var D1=parseInt(D1_Ceg);
+var D2=parseInt(D2_Ceg);
+var G1=parseInt(G1_Ceg);
+var G2=parseInt(G2_Ceg);
+
+if (32>D1>0 && 32>D2>0 && 24>G1>=0 && 24>G2>=0 && D1<D2){
+    var suma_dni = D2-D1-1
+    var suma_sdni = suma_dni*24*60*60;
+    var suma_godziny1 = 24-G1;
+    var suma_godziny2 = G2;
+    var suma_sgodziny = suma_godziny1*60*60 + suma_godziny2*60*60;
+    var suma_sekund = suma_sdni+suma_sgodziny;
+    document.write(suma_sekund);
+}
+else{
+    document.write("Zue dane >:C")
+}
+
+
+
+</script>
+</div>
+</body>
+</html>
