@@ -1,0 +1,48 @@
+<html>
+<body>
+
+Ocena 1: <input type="number" id="ocena1">
+Waga 1: <input type="number" id="waga1"><br><br>
+Ocena 2: <input type="number" id="ocena2">
+Waga 2: <input type="number" id="waga2"><br><br>
+Ocena 3: <input type="number" id="ocena3">
+Waga 3: <input type="number" id="waga3"><br><br>
+Ocena 4: <input type="number" id="ocena4">
+Waga 4: <input type="number" id="waga4"><br><br>
+<button onclick="javascript:oblicz()">Oblicz</button>
+<div id="srednia"></div>
+<script>
+var oc1, oc2, oc3, oc4, wa1, wa2, wa3, wa4, ocena1, ocena2, ocena3, ocena4, x,srednia;
+
+function oblicz(){
+oc1 = document.getElementById('ocena1').value;
+oc2 = document.getElementById('ocena2').value;
+oc3 = document.getElementById('ocena3').value;
+oc4 = document.getElementById('ocena4').value;
+wa1 = document.getElementById('waga1').value;           
+wa2 = document.getElementById('waga2').value;
+wa3 = document.getElementById('waga3').value;
+wa4 = document.getElementById('waga4').value;
+
+var o1 = parseFloat(oc1);
+var o2 = parseFloat(oc2);
+var o3 = parseFloat(oc3);
+var o4 = parseFloat(oc4);
+var w1 = parseFloat(wa1);
+var w2 = parseFloat(wa2);
+var w3 = parseFloat(wa3);
+var w4 = parseFloat(wa4);
+
+ocena1 = o1 * w1;
+ocena2 = o2 * w2;
+ocena3 = o3 * w3;
+ocena4 = o4 * w4;
+x = w1 + w2 + w3 + w4;
+srednia = ocena1 + ocena2 + ocena3 + ocena4;
+srednia = srednia / x;
+document.getElementById('srednia').innerText = "Średnia: " + srednia;
+}
+
+</script>
+</body>
+</html>
