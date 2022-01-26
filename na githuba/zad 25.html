@@ -1,0 +1,83 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <b> 
+        1. W jaki sposób można określić właściwość danego obiektu ( dwa sposoby wraz z <br>
+przykładami)? (odpowiedź poniżej)<br>
+2. W jaki sposób można odwołać się do pól (właściwości) i metod? (odpowiedź poniżej)<br>
+3. Wymień cechy charakterystyczne konstruktora. (odpowiedź poniżej)<br>
+4. Konstruowanie obiektu na podstawie przykładu→obiekt ma trzy pola oraz jedną metodę.<br>
+5. Znaczenie słowa this. Jak oddzielamy pola oraz metody? (odpowiedź poniżej)<br>
+6. Konstruktor w JS na podstawie przykładu wraz z opisem.<br>
+7. Znaczenie słowa kluczowego New wraz z przykładem.<br>
+8. Znaczenie słowa kluczowego prototype wraz z przykładem i opisem ( szczególnie ważny <br>
+tekst pogrubiony).<br>
+    </b>
+
+    <br>
+    <h2>Odpowiedzi: </h2>
+
+    <br>
+    <h4>1. </h4><br>
+    Sposób 1<br>
+Używając zapisu postaci: <br>
+a)<br>
+nazwa_obiektu.nazwa_właściwości="tekst"; → dla właściwości typu tekstowego<br>
+np.<br>
+auto.marka="Opel Omega";<br>
+b)<br>
+nazwa_obiektu.nazwa_właściwości=liczba; → dla właściwości typu liczbowego<br>
+np.<br>
+auto.rok=1996;<br>
+auto.cena=25000;<br>
+Sposób 2<br>
+używając zapisu postaci: <br>
+nazwa_obiektu[nazwa_właściwości];<br>
+np. auto[cena]=25000;<br>
+<br>
+<h4>2. </h4><br>
+
+Do właściwości i metod można się odwołać podobnie jak do zwykłych zmiennych <br>
+i funkcji, trzeba tylko przed ich nazwą umieścić nazwę obiektu, którego są elementami <br>
+(np. zmienną, która przechowuje dany obiekt), i kropkę.<br>
+np. console.log(samochod1.kolor); → wyświetla kolor obiektu samochod<br>
+<br>
+
+<h4>3. </h4> <br>
+jest wywoływany (uruchamiany) automatycznie w chwili tworzenia obiektu danej klasy - na <br>
+rzecz tego obiektu,<br>
+nazywa się tak samo jak klasa,<br>
+nie zwraca żadnej wartości ,<br>
+może przyjmować argumenty - tak jak zwykła funkcja czy metoda, aby następnie powołać do <br>
+życia obiekt za pomocą operatora new.<br>
+
+<br>
+    <h4>4. </h4>
+    var osoba_1 =<br>
+    {<br>
+    nazwisko : ‘Kowalski’,<br>
+    imie :’Jan’,<br>
+    zawod :’piekarz’,<br>
+    wyświetl :function ()<br>
+    {<br>
+    Document.write(this.nazwisko + ‘ ‘ + this.imie)<br>
+    }<br>
+    }<br><br>
+    Uwaga1:<br>
+    Słowo kluczowe this → pozwala odwołać się do pola lub metody obiektu z wnętrza tego obiektu.<br>
+    Uwaga2:<br>
+    Metody i pola muszą być odzielne przecinkami w obrębie jednego obiektu.<br>
+
+    <h4>5. </h4>
+    Słowo kluczowe this → pozwala odwołać się do pola lub metody obiektu z wnętrza tego obiektu<br>
+    
+
+
+
+
+
+
+</body>
+</html>

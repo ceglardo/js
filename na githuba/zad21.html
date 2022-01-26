@@ -1,0 +1,41 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 21</title>
+</head>
+<body>
+    Wysokosc: <input type="number" id="x">
+    Dlugosc: <input type="number" id="d"><br><br>
+    <button onclick="javascript:oblicz()">Oblicz</button>
+
+    <div id="drabina"></div>
+
+    <script>
+        var d, x, drabinaP, drabina, a,alfa, C, B ;
+
+        function oblicz(){
+            x = document.getElementById('x').value;
+            d = document.getElementById('d').value;
+
+
+
+
+            drabinaP=x*x+d*d;
+
+            drabina=Math.sqrt(drabinaP);
+
+            a=d/x;
+
+           alfa=Math.atan(a)*180/3.14;  
+
+           C=Math.round(drabina*10)/10;
+           B=Math.round(alfa*10)/10;
+
+
+
+            document.getElementById('drabina').innerText = "Długość drabiny wynosi: " + C + ", a kat alfa wynosi: "+ B +"°.";
+        }
+
+    </script>
+</body>
+</html>
