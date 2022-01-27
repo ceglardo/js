@@ -72,6 +72,54 @@ może przyjmować argumenty - tak jak zwykła funkcja czy metoda, aby następnie
 
     <h4>5. </h4>
     Słowo kluczowe this → pozwala odwołać się do pola lub metody obiektu z wnętrza tego obiektu<br>
+    function klient(nazwisko_k,imie_k,zawod_k)<br>
+{<br>
+this.nazwisko=nazwisko_k;<br>
+this.imie=imie_k;<br>
+this.zawod=zawod_k;<br>
+wypisz = function ()<br>
+ {<br>
+ alert(this.nazwisko + ' ' + this.imie)<br>
+ }<br><br>
+
+ <h4>6.</h4><br>
+ Zostanie utworzony konstruktor o nazwie klient z właściwościami nazwisko, imie, zawod oraz <br>
+metodą wypisz(). Właściwościom obiektu zostały przypisane wartości parametrów. Użyte słowo <br>
+kluczowe this odnosi się do aktualnego obiektu i pozwala na przypisanie wartości parametru do <br>
+odpowiedniego pola tego obiektu.<br>
+function klient(nazwisko_k,imie_k,zawod_k)<br>
+{<br>
+this.nazwisko=nazwisko_k;<br>
+this.imie=imie_k;<br>
+this.zawod=zawod_k;<br>
+wypisz = function ()<br>
+ {<br>
+ alert(this.nazwisko + ' ' + this.imie)<br>
+ }<br>
+}<br><br>
+
+<h4>7.</h4> <br>
+Do utworzenia nowego obiektu na podstawie konstruktora stosowane jest słowo kluczowe new.<br>
+Przykład<br>
+var osoba1 = new klient('Kowalski', 'Jan', 'kierowca');<br>
+var osoba2 = new klient('Nowak', 'Anna', 'sekretarka');<br>
+Powstały dwa nowe obiekty osoba1 i osoba2 należące do klasy klient.<br><br>
+
+<h4>8.</h4><br>
+Do definowania metod i właściwości dla obiektu jest wykorzystana właściwości prototype.<br>
+Przykład<br>
+function klient()<br>
+{<br>
+this.nazwisko='Bielski';<br>
+this.imie='Paweł';<br>
+}<br>
+klient.prototype.pisz_dane = function ()<br>
+ {<br>
+ document.write(this.nazwisko + ' ' + this.imie)<br>
+ }<br>
+klient.prototype.zawod = 'kierowca';<br>
+var osoba1 = new klient();<br>
+osoba1.pisz_dane();<br>
     
 
 
